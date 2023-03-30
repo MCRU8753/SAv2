@@ -1,7 +1,6 @@
 <?php
 include_once('header.php');
 
-#prebere vse oglase in jih razvrsti po času
 function get_ads(){
     global $conn;
     $query = "SELECT * FROM ads ORDER BY datetime DESC;";
