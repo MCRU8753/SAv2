@@ -14,19 +14,16 @@ header("Access-Control-Allow-Origin: *");
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-// Razberemo parametre iz URL - razbijemo URL po '/'
 if(isset($_SERVER['PATH_INFO']))
 	$request = explode('/', trim($_SERVER['PATH_INFO'],'/'));
 else
 	$request="";
 
-// Preverimo, če je v url-ju prva pot
 if(!isset($request[0]) || $request[0] != "comments"){
     echo json_encode((object)["status"=>"404", "message"=>"Not found"]);
     die();
 }
 
-// Odvisno od metode pokličemo ustrezen controller action
 switch($method){
     case "GET":
         if(isset($request[1]) && $request[1] == "lastFive") {

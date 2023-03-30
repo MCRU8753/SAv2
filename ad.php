@@ -24,7 +24,6 @@ function get_ad_images($id) {
     return $images;
 }
 
-#štetje ogledov
 function get_ad_views($ad_id) {
     global $conn;
     $user_id = "";

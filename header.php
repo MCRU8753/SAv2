@@ -1,5 +1,4 @@
 <?php
-	#začetek seje in povezava z bazo
 	session_start();
 	
 	if(isset($_SESSION['LAST_ACTIVITY']) && time() - $_SESSION['LAST_ACTIVITY'] < 1800){

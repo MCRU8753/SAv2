@@ -1,24 +1,11 @@
 <?php
-/*
-    Controller za oglase. Vključuje naslednje standardne akcije:
-        index: izpiše vse oglase
-        show: izpiše posamezen oglas
-        create: izpiše obrazec za vstavljanje oglasa
-        store: vstavi obrazec v bazo
-        edit: izpiše vmesnik za urejanje oglasa
-        update: posodobi oglas v bazi
-        delete: izbriše oglas iz baze
-*/
 
 class users_controller
 {
     public function index()
     {
-        //s pomočjo statične metode modela, dobimo seznam vseh oglasov
-        //$ads bo na voljo v pogledu za vse oglase index.php
         $users = User::all();
 
-        //pogled bo oblikoval seznam vseh oglasov v html kodo
         require_once('views/users/index.php');
     }
 

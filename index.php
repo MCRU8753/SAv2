@@ -74,7 +74,6 @@ function renderLastComments(comments) {
 </div>
 <hr/>
 <?php
-#izpis oglasov in link z GET parametrom
 foreach($ads as $ad){
     ?>
     <div class="ad">

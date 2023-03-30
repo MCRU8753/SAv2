@@ -1,7 +1,6 @@
 <?php
 include_once('header.php');
 
-#pridobitev oglasov glede na uporabnika
 function get_ads(){
     global $conn;
     $user_id = $_SESSION["USER_ID"];
